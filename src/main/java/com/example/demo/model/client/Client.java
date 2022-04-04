@@ -1,8 +1,10 @@
 package com.example.demo.model.client;
 
 import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 
 @Data
@@ -10,19 +12,30 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Entity(name="Client")
+@Entity(name="Client2")
 public class Client {
     @Id
-    private String client_id;
-    @Column(nullable = false)
+    @Column(name = "client_index")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer clientIndex;
+    @Column(name = "client_id")
+    private String clientId;
+    @Column(name = "password")
     private String password;
-    private String name;
-    private String nickname;
-    private String address;
+    @Column
     private String email;
-    private String phone_number;
-    private int age;
-    private int trust_point;
+    @Column(name = "phone_number")
+    private String phoneNumber;
+    @Column
+    private Date birthdate;
+    @Column(name = "sns_type")
+    private int snsType;
+    @Column(name = "client_name")
+    private String clientName;
+    @Column
+    private String nickname;
+    @Column
+    private int subscribe;
     @Column
     @Enumerated(EnumType.STRING)
     private Role role;

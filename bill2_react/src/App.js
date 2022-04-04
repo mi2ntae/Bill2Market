@@ -7,16 +7,16 @@ import SignUpPage from "./signUp/signUp";
 
 function App() {
     return (
-        <div>
-            <BrowserRouter>
-                        <Routes>
-                            <Route path = "/*" element={<MainPage />} />
-                            <Route path = "/login" element={<LoginPage />} />
-                            <Route path = "/signUp" element={<SignUpPage />} />
-                        </Routes>
-            </BrowserRouter>
-        </div>
-    );
+      <div>
+             <BrowserRouter>
+                         <Routes>
+                             <Route path = "/*" element={<MainPage />} />
+                             <Route path = "/login" element={<LoginPage />} />
+                             <Route path = "/signUp" element={<SignUpPage />} />
+                         </Routes>
+             </BrowserRouter>
+         </div>
+   );
 }
 
 export default App;

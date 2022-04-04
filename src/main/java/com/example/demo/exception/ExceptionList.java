@@ -11,7 +11,9 @@ public enum ExceptionList {
     CLIENT_NOT_FOUNT(-1000, "해당 사용자가 존재하지 않습니다."),
     PASSWORD_MISMATCH(-1001, "비밀번호가 일치하지 않습니다."),
     AUTHENTICATION_ENTRYPOINT(-1002, "해당 기능을 이용하기 위한 권한이 없습니다."),
-    ACCESS_DENIED(-1003, "권한이 부족하여 해당 기능을 이용하실 수 없습니다.");
+    ACCESS_DENIED(-1003, "권한이 부족하여 해당 기능을 이용하실 수 없습니다."),
+    INPUT_NULL(-1004, "입력하지 않은 값이 있습니다."),
+    EXIST_ID(-1005, "이미 존재하는 아이디입니다.");
 
     private final int code;
     private final String message;

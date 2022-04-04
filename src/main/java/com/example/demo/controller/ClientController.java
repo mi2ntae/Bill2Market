@@ -1,3 +1,4 @@
+
 package com.example.demo.controller;
 
 import com.example.demo.exception.client.ClientNotFoundException;
@@ -25,7 +26,7 @@ public class ClientController {
     public CommonResult myInfo(){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         return responseService.getSingleResult(
-                clientRepository.findById(auth.getName()).orElseThrow(ClientNotFoundException::new));
+                clientRepository.findById(Integer.parseInt(auth.getName())).orElseThrow(ClientNotFoundException::new));
     }
 
 }
